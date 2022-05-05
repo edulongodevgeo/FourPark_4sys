@@ -15,7 +15,7 @@ public class Menu {
 			System.out.println("\n ____Bem vindo ao FourParking____" 
 					+ "\n|________________________________|"
 					+ "\n|1 - Consultar vagas ocupadas    |" 
-					+ "\n|2 - Consultar vagas dispon�veis |"
+					+ "\n|2 - Consultar vagas disponíveis |"
 					+ "\n|3 - Colocar carro em vaga       |" 
 					+ "\n|4 - Retirar carro em vaga       |"
 					+ "\n|5 - Dados da vaga               |"
@@ -23,14 +23,14 @@ public class Menu {
 					+ "\n|        0 - S A I R             |"
 					+ "\n|________________________________|"
 					+ "\n"
-					+ "\nInforme a opera��o desejada >>>");
+					+ "\nInforme a operação desejada >>>");
 
 			opcao = sc.nextInt();
 			
 			switch (opcao) {
 			case 1:
 				
-				String vagasDisponiveis = "\n\nAs vagas ocupadas s�o: \n";
+				String vagasDisponiveis = "\n\nAs vagas ocupadas são: \n";
 				
 				for(int i = 1; i < vagas.length; i++) {
 					if (vagas[i] != null) {
@@ -42,7 +42,7 @@ public class Menu {
 				break;
 				
 			case 2:
-				String vagasOcupadas = "\n\nAs vagas dispon�veis s�o: \n";
+				String vagasOcupadas = "\n\nAs vagas disponíveis são: \n";
 
 				for (int i = 1; i < vagas.length; i++) {
 					if (vagas[i] == null) {
@@ -56,7 +56,7 @@ public class Menu {
 			case 3:
 				System.out.println("Digite a placa do carro: ");
 				String placa = sc.next();
-				System.out.println("Digite o modelo do ve�culo: ");
+				System.out.println("Digite o modelo do veículo: ");
 				String modelo = sc.next();
 				
 				Veiculo veiculo = new Veiculo();
@@ -69,7 +69,7 @@ public class Menu {
 				vaga.setHoraEntrada(d);
 				vaga.setVeiculo(veiculo);
 				
-				System.out.println("Digite a vaga que ser� ocupada: ");
+				System.out.println("Digite a vaga que será ocupada: ");
 				int i = sc.nextInt();
 				
 				vagas[i] = vaga;
@@ -77,12 +77,12 @@ public class Menu {
 				break;
 				
 			case 4:
-				System.out.println("Digite a vaga que ser� desocupada: ");
+				System.out.println("Digite a vaga que será desocupada: ");
 				
 				int x = sc.nextInt();
 				
 				if(vagas[x] == null) {
-					System.out.println("N�o existem carros nesta vaga.");
+					System.out.println("Não existem carros nesta vaga.");
 				} else {
 					vagas[x] = null;
 					
@@ -94,7 +94,7 @@ public class Menu {
 				int y = sc.nextInt();
 				
 				if(vagas[y] == null) {
-					System.out.println("N�o existem carros nesta vaga.");
+					System.out.println("Não existem carros nesta vaga.");
 				} else {
 					vagas[y] = null;
 					
@@ -105,7 +105,7 @@ public class Menu {
 				
 			default:
 				if (opcao != 0) {
-					System.out.println("\n\nVoc� precisa selecionar uma das op��es v�lidas\n");
+					System.out.println("\n\nVocê precisa selecionar uma das opções válidas\n");
 				}
 				break;
 			}
